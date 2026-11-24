@@ -1,0 +1,50 @@
+# Anshul Pachoria — Supply Chain Analytics Portfolio
+
+A responsive, static portfolio website intended for GitHub Pages. It presents supply chain planning, forecasting, inventory, procurement, supplier analytics and BI work.
+
+## Before publishing — important checks
+
+1. **Verify every resume statement.** The experience, dates, role titles, tools and performance figures in the site are transcribed or summarized from the resume supplied for this portfolio. Publish only claims that are accurate, defensible and authorized for public disclosure.
+2. **Confirm employer naming and permission.** Do not upload employer-owned data, internal dashboards, screenshots, source code, customer/supplier names, or confidential process details. Keep all public case studies anonymized.
+3. **Add your GitHub username.** Replace `YOUR-GITHUB-USERNAME` in `index.html` with your actual username.
+4. **Add a public resume PDF if desired.** Put a reviewed PDF in this folder named `Anshul_Pachoria_Resume.pdf`. The link is already wired into the site. Consider removing personal phone/email details from a public PDF if you prefer.
+5. **Add real evidence.** Link finished notebooks, SQL scripts, dashboards, screenshots and demo data from each case study only after checking that they contain no confidential information.
+
+## Publish with GitHub Pages
+
+1. Create a GitHub account if you do not already have one.
+2. Create a new **public** repository named `YOUR-GITHUB-USERNAME.github.io` (replace the placeholder with your exact username).
+3. Upload the contents of this folder to the repository root — `index.html`, `styles.css`, `projects/`, `README.md`.
+4. In the repository, open **Settings → Pages**. Choose **Deploy from a branch**, select `main` and `/ (root)`, then save.
+5. Wait for the deployment and open `https://YOUR-GITHUB-USERNAME.github.io`.
+6. Test the site on mobile and desktop. Update the GitHub and resume links.
+
+You can alternatively create a repository named `supply-chain-analytics-portfolio`, enable Pages in Settings → Pages, and share the resulting Pages URL.
+
+## Repository structure
+
+```text
+.
+├── index.html
+├── styles.css
+├── README.md
+└── projects
+    ├── demand-forecasting
+    │   └── README.md
+    └── supplier-risk
+        └── README.md
+```
+
+## Portfolio positioning
+
+**Headline:** Supply Chain Analyst | Demand & Supply Planning | Inventory Optimization | SAP / Oracle | SQL, Python & Power BI
+
+**Short introduction:** Supply chain and analytics professional focused on forecasting, inventory, procurement, supplier performance and operational visibility. Experienced with SQL, Python, Excel, Power BI, Tableau and ERP-based planning workflows.
+
+## Recommended next additions
+
+- A clean, synthetic order-history dataset and reproducible forecasting notebook.
+- SQL queries for supplier OTIF, lead-time variability and purchase-order aging.
+- A Power BI or Tableau dashboard built from the synthetic datasets.
+- A short project walkthrough video or screenshots with synthetic data only.
+- A `LICENSE` file if you want to define reuse terms for your original code.
