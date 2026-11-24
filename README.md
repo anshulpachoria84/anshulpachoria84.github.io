@@ -1,34 +1,35 @@
-# End-to-End Demand Forecast Engine & Inventory Control Tower
+# Supplier Risk Analysis & Freight Logistics Optimization Pipeline
 
-**Focus:** Demand forecasting, replenishment signals and inventory visibility  
-**Tools named in resume:** Python, Pandas, statsmodels, Prophet, Advanced SQL, Power BI, DAX, PostgreSQL and Excel.
+**Focus:** Supplier reliability, lead-time variation, freight delays and OTIF  
+**Tools named in resume:** Tableau, SQL, window functions, CTEs, Python, SAP SCM data and Excel VBA.
 
 ## Business question
 
-How can a planning team turn historical order patterns into a repeatable forecast and inventory review process, while making stockout exposure and replenishment priorities easier to see?
+Which suppliers, lanes or purchase orders deserve attention first because of late delivery patterns, variable lead times or price variance?
 
-## Workflow
+## Analytical workflow
 
-1. **Prepare the data:** validate order dates, product identifiers, quantities, missing values and duplicate records.
-2. **Explore demand:** profile demand by SKU and time period; inspect trend, seasonality, outliers and intermittent demand.
-3. **Build a baseline:** compare a naïve or seasonal-naïve forecast with an ARIMA model and (where suitable) Prophet.
-4. **Back-test:** use a time-based holdout rather than random train/test splitting. Compare MAE, RMSE and MAPE / WAPE, with care around zero-demand periods.
-5. **Translate forecast to planning signals:** combine forecast demand, lead time, review period, on-hand inventory and open supply to calculate projected coverage and reorder alerts.
-6. **Visualize:** design a Power BI control-tower view for forecast error, inventory status, safety-stock exceptions and replenishment priorities.
+1. Standardize supplier, purchase-order, promised-date, receipt-date, quantity and unit-price fields.
+2. Calculate delivery lateness and lead-time variability at PO and supplier level.
+3. Define OTIF precisely: a delivery counts only when it is both on time and in full, using an agreed tolerance and date definition.
+4. Compare actual lead time with contracted or planned lead time.
+5. Identify high-risk suppliers and freight lanes using transparent, explainable rules.
+6. Present exceptions, trends and supplier comparisons in a Tableau dashboard.
 
-## Example measures
+## Example KPIs
 
-- Forecast error: MAE, RMSE, WAPE / MAPE (document the denominator and treatment of zero demand).
-- Inventory cover: available inventory divided by average daily demand.
-- Reorder trigger: demand during lead time plus an explicitly documented safety-stock assumption.
-- Stockout exposure: projected demand not covered by available and expected supply.
+- OTIF rate = on-time and in-full eligible deliveries / total eligible deliveries.
+- Average and median lead time.
+- Lead-time standard deviation or coefficient of variation.
+- Late PO count and overdue open-PO value.
+- Unit-price variance against an approved reference price.
 
 ## Resume-reported project outcome
 
-The supplied resume describes processing **100K+ historical order records** and reducing inventory stockout risk by **28%**. Treat these as resume-reported results; add the measurement period, baseline, definition of stockout risk and validation evidence before presenting them as independently reproducible outcomes.
+The supplied resume describes analysis of **50+ vendor lead times**, carrier delays and pricing variances, with a reported **14% improvement in OTIF delivery compliance**. Add the baseline, time period, population, and calculation method before publishing this as a measured result.
 
-## Public demonstration plan
+## Suggested public demo
 
-Create a synthetic dataset with columns such as `order_date`, `sku_id`, `quantity`, `location_id`, `lead_time_days`, `on_hand_qty` and `open_po_qty`. Use generated sample records only. Add a notebook showing data validation, train/test split, baseline comparison, model evaluation and a replenishment exception table.
+Build a synthetic supplier/PO dataset. Include SQL examples for late-PO ranking, rolling supplier OTIF, lead-time variability and price variance. Use a Tableau Public workbook or screenshots based only on the synthetic data.
 
-> **Data note:** This repository currently contains the case-study specification, not employer source data or a verified implementation. Any future demo dataset must be clearly labelled synthetic. Never publish proprietary or personally identifiable data.
+> **Data note:** This is a project case-study outline based on the supplied resume. It is not a claim that employer-confidential datasets or dashboards are included in this public repository.
