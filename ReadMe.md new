@@ -1,35 +1,241 @@
 Supplier Risk Analysis & Freight Logistics Optimization Pipeline
 
-Focus: Supplier reliability, lead-time variation, freight delays and OTIF  
-Tools named in resume: Tableau, SQL, window functions, CTEs, Python, SAP SCM data and Excel VBA.
+### Supplier Performance | Procurement Analytics | Freight Optimization | OTIF | Supply Chain Risk Management
 
-## Business question
+---
 
-Which suppliers, lanes or purchase orders deserve attention first because of late delivery patterns, variable lead times or price variance?
+## 1. Project Overview
 
-## Analytical workflow
+Supplier reliability and transportation performance are critical factors in maintaining an efficient and resilient supply chain.
 
-1. Standardize supplier, purchase-order, promised-date, receipt-date, quantity and unit-price fields.
-2. Calculate delivery lateness and lead-time variability at PO and supplier level.
-3. Define OTIF precisely: a delivery counts only when it is both on time and in full, using an agreed tolerance and date definition.
-4. Compare actual lead time with contracted or planned lead time.
-5. Identify high-risk suppliers and freight lanes using transparent, explainable rules.
-6. Present exceptions, trends and supplier comparisons in a Tableau dashboard.
+This project focuses on developing a data-driven supplier risk analysis and freight logistics optimization pipeline to evaluate supplier delivery performance, identify procurement risks, monitor lead-time variability and improve On-Time In-Full (OTIF) delivery compliance.
 
-## Example KPIs
+Using SQL, Python, Tableau, Excel VBA and SAP SCM data concepts, the analytical framework helps supply chain teams identify underperforming suppliers, investigate freight delays, evaluate purchase order performance and prioritize corrective actions.
 
-- OTIF rate = on-time and in-full eligible deliveries / total eligible deliveries.
-- Average and median lead time.
-- Lead-time standard deviation or coefficient of variation.
-- Late PO count and overdue open-PO value.
-- Unit-price variance against an approved reference price.
+**Primary objective:** Transform supplier and logistics data into actionable insights that support procurement decisions, improve delivery reliability and strengthen supply chain performance.
 
-## Resume-reported project outcome
+## 2. Business Problem
 
-The supplied resume describes analysis of **50+ vendor lead times**, carrier delays and pricing variances, with a reported **14% improvement in OTIF delivery compliance**. Add the baseline, time period, population, and calculation method before publishing this as a measured result.
+Which suppliers, transportation lanes and purchase orders require immediate attention because of:
 
-## Suggested public demo
+- Repeated late deliveries.
+- Unpredictable supplier lead times.
+- Freight transportation delays.
+- Incomplete purchase order deliveries.
+- Supplier pricing and cost variances.
+- Poor On-Time In-Full (OTIF) performance.
+- Potential disruptions to material availability.
 
-Build a synthetic supplier/PO dataset. Include SQL examples for late-PO ranking, rolling supplier OTIF, lead-time variability and price variance. Use a Tableau Public workbook or screenshots based only on the synthetic data.
+Without structured supplier performance monitoring, procurement and supply chain teams may struggle to identify risks early, evaluate supplier reliability and make informed sourcing decisions.
 
-> **Data note:** This is a project case-study outline based on the supplied resume. It is not a claim that employer-confidential datasets or dashboards are included in this public repository.
+## 3. Project Objectives
+
+1. Evaluate supplier delivery performance and reliability.
+2. Identify suppliers with high lead-time variability.
+3. Analyze purchase order delays and overdue deliveries.
+4. Measure On-Time In-Full (OTIF) performance.
+5. Monitor freight transportation delays and logistics bottlenecks.
+6. Identify supplier pricing variances and procurement cost risks.
+7. Develop supplier risk indicators and performance scorecards.
+8. Create actionable dashboards for procurement and supply chain management.
+
+## 4. Technology Stack
+
+| Technology | Application |
+|---|---|
+| SQL | Data extraction, transformation and supplier analysis |
+| Advanced SQL | CTEs, Window Functions, aggregations and ranking |
+| Python | Data cleaning, analysis and automation |
+| Pandas | Data manipulation and supplier performance analysis |
+| Tableau | Interactive supplier performance dashboards |
+| Excel VBA | Reporting and inventory/procurement automation |
+| SAP SCM | ERP and supply chain data context |
+
+## 5. Analytical Workflow
+
+### Step 1: Data Collection & Standardization
+
+Prepare and standardize supplier, purchase order and logistics information.
+
+Key fields include:
+
+- Supplier ID and Supplier Name
+- Purchase Order Number
+- Material / Product ID
+- PO Creation Date
+- Promised Delivery Date
+- Actual Receipt Date
+- Ordered Quantity
+- Received Quantity
+- Contractual Lead Time
+- Actual Lead Time
+- Unit Purchase Price
+- Reference Purchase Price
+- Transportation Lane / Carrier
+
+### Step 2: Supplier Lead-Time Analysis
+
+Evaluate supplier delivery consistency using planned and actual lead times.
+
+Analysis includes:
+
+- Average supplier lead time.
+- Median lead time.
+- Lead-time standard deviation.
+- Lead-time coefficient of variation.
+- Delayed purchase order frequency.
+- Supplier delivery consistency.
+
+### Step 3: OTIF Performance Measurement
+
+Measure whether suppliers deliver the correct quantity within the agreed delivery window.
+
+**OTIF Formula:**
+
+OTIF (%) = (On-Time and In-Full Deliveries / Total Eligible Deliveries) × 100
+
+A delivery qualifies as OTIF only when it satisfies both the agreed delivery-date tolerance and the required quantity criteria.
+
+### Step 4: Purchase Order & Freight Risk Analysis
+
+Identify operational bottlenecks through:
+
+- Overdue purchase order monitoring.
+- Supplier delivery delays.
+- Freight transportation delays.
+- Carrier performance evaluation.
+- Material availability risks.
+- Open purchase order exposure.
+
+### Step 5: Supplier Risk Identification
+
+Develop transparent supplier risk indicators based on:
+
+- Delivery reliability.
+- Lead-time variability.
+- OTIF performance.
+- Purchase order fulfillment.
+- Pricing variance.
+- Freight delay frequency.
+
+Use documented thresholds and clearly defined scoring rules to classify suppliers into risk categories.
+
+### Step 6: Tableau Dashboard Development
+
+Develop an interactive dashboard concept to provide procurement and supply chain management with visibility into supplier performance and logistics risks.
+
+## 6. Key Performance Indicators (KPIs)
+
+| KPI | Measurement |
+|---|---|
+| OTIF % | On-time and in-full deliveries / eligible deliveries |
+| Average Lead Time | Average actual supplier lead time |
+| Median Lead Time | Middle value of actual lead times |
+| Lead-Time Variability | Standard deviation of supplier lead time |
+| Lead-Time CV | Standard deviation / mean lead time |
+| Late PO Count | Number of overdue or late purchase orders |
+| Overdue PO Value | Financial value of overdue open purchase orders |
+| Price Variance | Actual unit price versus approved reference price |
+| Supplier Reliability | Composite supplier performance assessment |
+
+## 7. Expected Business Benefits
+
+The analytical framework is designed to help organizations:
+
+- Improve supplier delivery reliability.
+- Identify procurement and supply disruption risks.
+- Reduce unexpected material shortages.
+- Improve purchase order visibility.
+- Strengthen supplier accountability.
+- Support strategic sourcing decisions.
+- Improve transportation and carrier performance.
+- Enable proactive, data-driven supply chain management.
+
+## 8. Resume-Reported Project Results
+
+The project experience described in my professional resume includes:
+
+| Performance Indicator | Reported Result |
+|---|---:|
+| Supplier lead-time analysis | 50+ vendors |
+| OTIF delivery compliance improvement | 14% |
+
+The reported OTIF improvement should be interpreted with its baseline, measurement period, supplier population and calculation methodology established before independent verification.
+
+## 9. Proposed Repository Structure
+
+```text
+supplier-risk-freight-optimization/
+│
+├── README.md
+│
+├── data/
+│   ├── suppliers.csv
+│   ├── purchase_orders.csv
+│   ├── deliveries.csv
+│   └── freight_performance.csv
+│
+├── sql/
+│   ├── supplier_performance.sql
+│   ├── otif_analysis.sql
+│   ├── lead_time_analysis.sql
+│   ├── purchase_order_risk.sql
+│   └── pricing_variance.sql
+│
+├── python/
+│   ├── data_cleaning.py
+│   ├── supplier_risk_analysis.py
+│   └── freight_analysis.py
+│
+├── tableau/
+│   └── dashboard_documentation.md
+│
+├── reports/
+│   └── supplier_risk_summary.md
+│
+└── screenshots/
+    └── dashboard_preview.png
+```
+
+*This is the proposed structure for future project development. Files and dashboards should be added as they are actually created.*
+
+## 10. Future Enhancements
+
+- Automated supplier risk scoring.
+- Predictive supplier delivery delay modeling.
+- Freight lane performance optimization.
+- Supplier segmentation and benchmarking.
+- Automated procurement exception reporting.
+- Interactive Tableau supplier scorecards.
+- Predictive analytics for supply chain disruption prevention.
+
+## 11. Data Confidentiality & Disclaimer
+
+This repository is intended for educational, professional portfolio and analytical demonstration purposes.
+
+Public demonstrations will use synthetic, anonymized or otherwise authorized datasets.
+
+No confidential company data, proprietary ERP extracts, internal supplier records, customer information or employer-owned dashboards are intended to be published.
+
+The case study describes the analytical approach and experience outlined in my professional resume. The proposed public implementation and sample datasets are separate portfolio demonstrations.
+
+---
+
+## About the Author
+
+**Anshul Pachoria**  
+Supply Chain Analytics | Supply Planning | Procurement | Operations
+
+**Education:**
+- M.S. in Supply Chain Analytics — Washington University in St. Louis
+- M.S. in International Business — Hult International Business School
+
+**Technical Expertise:** SQL | Python | Tableau | Power BI | SAP SCM | Oracle SCM | Advanced Excel
+
+**Connect with me:**
+
+- LinkedIn: https://www.linkedin.com/in/anshulpachoria11998/
+- GitHub: https://github.com/anshulpachoria84
+- Email: anshulpachoria84@gmail.com
+
+### Turning Supplier Data into Strategic Decisions. Building More Reliable and Resilient Supply Chains.
